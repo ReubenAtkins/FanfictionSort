@@ -74,6 +74,7 @@ public class StoryInformation {
 	}
 	static public void sortStories() {
 		Collections.sort(stories);
+		Collections.sort(stories);
 		for(Story tempSto:stories) {
 			System.out.println(tempSto.ratioHK +"  "+tempSto.url +"Stories Size:" + stories.size() + "\n");
 			

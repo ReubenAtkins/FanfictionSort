@@ -20,7 +20,7 @@ public class Story implements Comparable<Story> {
 		if (h <= 0 || k <= 0) {
 			ratioHK = -1.0;
 		}else {
-		ratioHK = k/h*1.0;
+		ratioHK = (double) k/h*1.0;
 		}
 		url = u;
 		
@@ -30,9 +30,9 @@ public class Story implements Comparable<Story> {
 		
 	}
 	public int compareTo(Story compareStory) {
-		double compareRatio = ((Story)compareStory).getratioHK()*100;
+		double compareRatio = (compareStory).getratioHK()*10000;
 		// ascending order: return (int) (this.ratioHK*100 - compareRatio);
-		return (int) (compareRatio - this.ratioHK*100);
+		return (int) (compareRatio - (this.ratioHK*10000));
 		
 	}
 

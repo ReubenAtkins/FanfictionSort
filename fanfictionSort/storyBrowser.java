@@ -34,7 +34,7 @@ public class storyBrowser {
 		int total = pageNumbers;
 		System.out.println(total);
 	
-		int counterz = (int) pageNumbers/2;
+		int counterz = (int) pageNumbers/50;
 		System.out.println("\n" + counterz);
 		//algorithm to return/review 50 pages need to figure out, should work as is?
 		if(counterz < 1) {
@@ -87,11 +87,11 @@ public class storyBrowser {
 			for(Story tempSto:pageInfos.stories) {
 				//String temp = String.format("%.10f", tempSto.ratioHK);
 			//	Integer temp2 = (int) ((double)tempSto.ratioHK*100.0);
-				Double temp2 = tempSto.getratioHK();
-				System.out.println("Double:"+df.format(temp2)+"\n");
-				System.out.println(temp2+"\n");
-				String temp = Double.toString(temp2);
-				System.out.println(temp);
+				Double temp2 = tempSto.getratioHK()*100.0;
+				//System.out.println("Double:"+df.format(temp2)+"\n");
+				//System.out.println(temp2+"\n");
+				String temp = df.format(temp2);
+				//System.out.println(temp);
 				wk.info.append(tempSto.url + "\nRatio:"+temp+"\nTitle: "+tempSto.title+"\n");
 			}
 		
